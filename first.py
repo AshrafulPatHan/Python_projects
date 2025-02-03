@@ -21,5 +21,14 @@ for i in range(5):
 for i in range(7):
 	print("gfdslfsdsfd;".encode().hex())
 
+# chak opearater
+
+_equal = 2 == 2
+print(_equal)
+
+
+_2equal = 2 > 4
+print(_2equal)
+
 
 
