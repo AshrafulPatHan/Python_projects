@@ -10,7 +10,7 @@ print(name[5:8])
 print(name[5:7])
 print(name[0:])
 
-# --------
+# --------	||
 
 poim = """ 
 ha ha ha ha ha 
