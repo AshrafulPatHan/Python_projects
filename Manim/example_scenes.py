@@ -1,5 +1,4 @@
 # python3 first.py
-#  manim -pql first.py SquareToCircle
 from manim import *
 
 
