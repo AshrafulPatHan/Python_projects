@@ -9,13 +9,12 @@ import os
 
 
 load_dotenv()
-
 auth_bp = Blueprint('auth', __name__, url_prefix='/auth')
 
 SECRET_KEY = os.getenv('JWT_KEY')
-
 print(f"API Key: {SECRET_KEY}")
 
+# login
 @auth_bp.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
@@ -60,7 +59,7 @@ def login():
     else:
         return jsonify({"message": "Invalid email or password"}), 401
 
-
+# register
 @auth_bp.route('/register',methods=['POST'])
 def register():
     data = request.get_json()
@@ -80,6 +79,7 @@ def register():
     result= jsonify({"message":"User is add successfully"}), 201
     return result
 
+# profile
 @auth_bp.route('/profile', methods=['GET'])
 def profile():
     token = request.cookies.get('token')
@@ -101,7 +101,7 @@ def profile():
     except jwt.InvalidTokenError:
         return jsonify({"message": "Invalid token"}), 401
 
-
+# logout
 @auth_bp.route('/logout', methods=['POST'])
 def logout():
     response = make_response(jsonify({"message": "Logged out"}), 200)
