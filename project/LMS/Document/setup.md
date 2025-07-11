@@ -5,7 +5,7 @@
 - to close venv environment => deactivate
 
 # installation 
-- packages => pip install flask flask-mysqldb flask-cors python-dotenv
+- packages => pip install flask flask-mysqldb flask-cors python-dotenv 
 
 
 # start the server
