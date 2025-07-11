@@ -1,8 +1,11 @@
 # python3 main.py
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,render_template
 from flask_cors import CORS
 from dotenv import load_dotenv
+from routes.auth.routes import auth_bp
+from routes.admin.routes import admin_bp
+from routes.public.routes import public_bp
 import os
 from DB import mysql, init_app
 
@@ -32,6 +35,16 @@ print(Owner)
 def Start_server():
     result = "server is running"
     return jsonify(result)
+
+# 📄 html website
+@app.route('/site')
+def HTML_SERVER():
+    return render_template("index.html")
+
+# 🧭 routes
+app.register_blueprint(auth_bp)
+app.register_blueprint(admin_bp)
+app.register_blueprint(public_bp)
 
 
 if __name__ == '__main__':
