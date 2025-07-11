@@ -8,3 +8,6 @@
 - packages => pip install flask flask-mysqldb flask-cors python-dotenv
 
 
+# start the server
+- python3 main.py
+
