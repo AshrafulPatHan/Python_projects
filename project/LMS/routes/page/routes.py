@@ -22,3 +22,8 @@ def book_page():
 def admin_page():
     return render_template("./page/admin.html")
 
+# 📜 User
+@page_bp.route('/user')
+def user_page():
+    return render_template("./page/user.html")
+
