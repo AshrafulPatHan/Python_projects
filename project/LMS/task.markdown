@@ -48,7 +48,7 @@
 
 #### **ডাটাবেস স্ট্রাকচার**
 MySQL এ নিম্নলিখিত টেবিল তৈরি করতে হবে:
-1. **users**:
+1. **Users**:
    - `id`, `username`, `email`, `password`, `role` (user/admin)
 2. **books**:
    - `id`, `title`, `author`, `category`, `publisher`, `cover_image_url`, `available_copies`
