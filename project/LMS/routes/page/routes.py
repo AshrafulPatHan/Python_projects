@@ -15,10 +15,10 @@ def register_page():
 # 📜 Book
 @page_bp.route('/book')
 def book_page():
-    return render_template("./page/book_list.html")
+    return render_template("./page/book.html")
 
 # 📜 Admin
 @page_bp.route('/admin')
 def admin_page():
-    return render_template("./page/admin_dashboard.html")
+    return render_template("./page/admin.html")
 
