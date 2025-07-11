@@ -2,10 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User</title>
 </head>
 <body>
-    <h2>User</h2>
+    <h2>User Page</h2>
+    <p id="userInfo">Loading user...</p>
+
+    <script>
+        async function checkUser() {
+            try {
+                const res = await fetch("/auth/profile", {
+                    method: "GET",
+                    credentials: "include"  // ⭐ Cookie পাঠাতে এইটা must
+                });
+
+                if (!res.ok) {
+                    // ❌ যদি status 401 হয়
+                    window.location.href = "/page/login";
+                    return;
+                }
+
+                const data = await res.json();
+                const user = data.user;
+                document.getElementById("userInfo").innerText = `Welcome, ${user.email}`;
+            } catch (err) {
+                // ❗ কোনো error হলে login এ পাঠাও
+                window.location.href = "/page/login";
+            }
+        }
+
+        // ⏳ Window লোড হলে চেক করো
+        window.onload = checkUser;
+    </script>
 </body>
 </html>
