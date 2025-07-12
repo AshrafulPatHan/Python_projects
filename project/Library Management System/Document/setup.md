@@ -9,5 +9,5 @@
 
 
 # start the server
-- python3 main.py
+- python3 app.py
 
