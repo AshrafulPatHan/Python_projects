@@ -1,4 +1,4 @@
-# python3 main.py
+# python3 app.py
 
 from flask import Flask, request, jsonify,render_template
 from flask_cors import CORS
