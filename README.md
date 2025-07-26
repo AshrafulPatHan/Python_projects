@@ -1,4 +1,4 @@
-# 🐍 FlaskAuthFileManager
+# 🐍 Flask AuthFile Manager
 
 A beginner-friendly **Python Flask** project for learning and practicing **authentication**, **file management**, and **CRUD operations** using **MySQL** database and **HTML** frontend. This project is designed to help developers understand how to build full-stack web applications with Flask and MySQL.
 
